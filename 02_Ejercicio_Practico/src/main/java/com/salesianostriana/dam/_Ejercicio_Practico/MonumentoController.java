@@ -27,7 +27,7 @@ public class MonumentoController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete (@PathVariable("id") Long id) {
         repository.deleteById(id);
-        return ResponseEntity.status(204).build;
+        return ResponseEntity.status(204).build();
     }
 
     @PutMapping("/{id}")

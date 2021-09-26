@@ -19,7 +19,7 @@ public class InitData {
                         new Monumento("ISO 1655-5 alfa 2", "Brazil", "Rio de Janeiro", "22°57′08″S", "43°12′37″O",
                                 "Cristo Redentor", "Gran monumento de Brazil", "http://cristo_redentor.com" ),
                         new Monumento("ISO 6514-7 alfa 2", "Italia", "Roma", "22°57′08″S", "43°12′37″O",
-                                "Colisseo Romano", "Gran monumento Romano", "http://colisseo_Romano.com" ),
+                                "Colisseo Romano", "Gran monumento Romano", "http://colisseo_Romano.com" )
                 )
         );
     }
