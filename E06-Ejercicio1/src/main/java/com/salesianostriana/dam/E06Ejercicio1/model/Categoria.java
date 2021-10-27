@@ -25,5 +25,6 @@ public class Categoria implements Serializable {
     @Builder.Default
     @OneToMany(mappedBy = "categoria")
     private List <Producto> productos = new ArrayList<>();
+    
 
 }
