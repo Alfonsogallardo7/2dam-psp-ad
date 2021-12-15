@@ -25,7 +25,7 @@ public class MainPrueba {
                 .precioGasoilEspecial(1.345)
                 .precioGasolina95(1.456)
                 .precioGasolina98(1.567)
-                .ubicacion("-34.435 4.4534")
+                .maps("-34.435 4.4534")
                 .servicios("Gasolinera wena de san juan, al lao de la esquina del gato")
                 .build();
 
@@ -38,7 +38,7 @@ public class MainPrueba {
                 .precioGasoilEspecial(1.345)
                 .precioGasolina95(1.456)
                 .precioGasolina98(1.567)
-                .ubicacion("-34.435 4.4534")
+                .maps("-34.435 4.4534")
                 .servicios("Gasolinera wena de mairena, en ciudad expo al lado del metro")
                 .build();
 

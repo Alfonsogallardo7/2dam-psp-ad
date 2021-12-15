@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @NoArgsConstructor @AllArgsConstructor
@@ -23,7 +24,7 @@ public class EstacionServicio {
 
     private String marca;
 
-    private String ubicacion;
+    private String maps;
 
     private boolean autolavado;
 
@@ -39,6 +40,8 @@ public class EstacionServicio {
     private String servicios;
 
     private LocalDate fechaApertura;
+
+    private LocalDate fechaRegistro = LocalDate.now();
 
 
 
