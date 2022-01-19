@@ -9,20 +9,24 @@ import com.salesianostriana.dam.ejerciciotesting.repos.VentaRepositorio;
 import com.salesianostriana.dam.ejerciciotesting.services.VentaServicio;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 import static org.mockito.Mockito.lenient;
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
 
 
-@ExtendWith(MockitoExtension.class)
+@RunWith(MockitoJUnitRunner.class)
 public class Testing1 {
 
     @Mock
@@ -37,13 +41,36 @@ public class Testing1 {
     //Caja Negra
     @Test
     public void nuevaVenta() {
-        LineaDeVenta lineaDeVenta = new LineaDeVenta(new Producto("4", "Ratón 3 botones", 19.99), 3,59.97);
+        Producto producto = Producto.builder()
+                .codigoProducto("1")
+                .nombre("Cascos huenos")
+                .precio(19.99).build();
+
+        Cliente cliente = Cliente.builder()
+                .nombre("Alfonso")
+                .email("alfonso@gmail.com")
+                .dni("54436607V")
+                .build();
+
+        lenient().when(productoRepositorio.findOne("1")).thenReturn(producto);
+
+        Map<String, Integer> carrito = Map.of("1", 2);
+
+        Venta venta = new Venta();
+        venta.setId(2L);
+        venta.setCliente(cliente);
+        venta.setLineasDeVenta(List.of(new LineaDeVenta(producto, 2, 19.99)));
+        lenient().when(ventaRepositorio.save(venta)).thenReturn(venta);
+        assertEquals(venta, ventaServicio.nuevaVenta(carrito, cliente));
+
+
+        /*LineaDeVenta lineaDeVenta = new LineaDeVenta(new Producto("4", "Ratón 3 botones", 19.99), 3,19.99);
         Cliente cliente = new Cliente();
         List<LineaDeVenta> listaLineaVenta = new ArrayList<>();
         listaLineaVenta.add(lineaDeVenta);
         Venta venta = new Venta(1L, LocalDate.now(), listaLineaVenta, cliente);
         lenient().when(productoRepositorio.findOne("4")).thenReturn(new Producto("4", "Ratón 3 botones", 19.99));
-        lenient().when(ventaRepositorio.save(venta)).thenReturn(venta);
+        lenient().when(ventaRepositorio.save(venta)).thenReturn(venta);*/
 
     }
 

@@ -1,0 +1,14 @@
+com\salesianostriana\dam\ejerciciotesting\model\LineaDeVenta$LineaDeVentaBuilder.class
+com\salesianostriana\dam\ejerciciotesting\model\LineaDeVenta.class
+com\salesianostriana\dam\ejerciciotesting\model\Producto$ProductoBuilder.class
+com\salesianostriana\dam\ejerciciotesting\model\Cliente$ClienteBuilder.class
+com\salesianostriana\dam\ejerciciotesting\services\VentaServicio.class
+com\salesianostriana\dam\ejerciciotesting\model\Venta.class
+com\salesianostriana\dam\ejerciciotesting\model\Venta$VentaBuilder.class
+com\salesianostriana\dam\ejerciciotesting\App.class
+com\salesianostriana\dam\ejerciciotesting\repos\Repositorio.class
+com\salesianostriana\dam\ejerciciotesting\repos\ClienteRepositorio.class
+com\salesianostriana\dam\ejerciciotesting\model\Cliente.class
+com\salesianostriana\dam\ejerciciotesting\model\Producto.class
+com\salesianostriana\dam\ejerciciotesting\repos\VentaRepositorio.class
+com\salesianostriana\dam\ejerciciotesting\repos\ProductoRepositorio.class
